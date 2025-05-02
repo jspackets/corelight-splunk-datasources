@@ -1,0 +1,18 @@
+name: Corelight conn
+id: 4da66cd1-cd0a-4b9f-a5ad-b15809a6d82c
+version: 1
+date: '2025-05-02'
+author: Jon Scher, Corelight
+description: Logs network connection metadata captured by Zeek (formerly Bro), including
+  details such as source and destination IPs, ports, connection state, and protocol.
+mitre_components:
+- Network Connection Creation
+- Network Traffic Flow
+- Response Metadata
+- Application Log Content
+source: corelight:conn:json
+sourcetype: corelight_conn
+supported_TA:
+- name: TA for Corelight
+  url: https://splunkbase.splunk.com/app/3885
+  version: 2.5.4

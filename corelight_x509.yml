@@ -1,0 +1,19 @@
+name: Corelight x509
+id: d6916237-596c-497a-a6e7-04a6337a33f7
+version: 1
+date: '2025-05-02'
+author: Jon Scher, Corelight
+description: Logs details about X.509 certificates observed in network traffic captured
+  by Zeek (formerly Bro), including certificate fields, validity periods, and issuers.
+mitre_components:
+- Certificate Registration
+- Network Traffic Content
+- Response Metadata
+- Application Log Content
+- Host Status
+source: corelight:x509:json
+sourcetype: corelight_x509
+supported_TA:
+- name: TA for Corelight
+  url: https://splunkbase.splunk.com/app/3885
+  version: 2.5.4

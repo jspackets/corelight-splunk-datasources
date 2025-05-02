@@ -1,0 +1,20 @@
+name: Corelight files
+id: 2f933a97-70d6-4770-99a8-fc2e4fff92c4
+version: 1
+date: '2025-05-02'
+author: Jon Scher, Corelight
+description: Logs metadata about files transferred over the network captured by Zeek
+  (formerly Bro), including details such as file names, hashes, MIME types, and transfer
+  protocols.
+mitre_components:
+- File Metadata
+- Network Traffic Content
+- Network Traffic Flow
+- Response Metadata
+- Application Log Content
+source: corelight:files:json
+sourcetype: corelight_files
+supported_TA:
+- name: TA for Corelight
+  url: https://splunkbase.splunk.com/app/3885
+  version: 2.5.4

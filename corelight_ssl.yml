@@ -1,0 +1,19 @@
+name: Corelight ssl
+id: c53e9c53-a9b0-4e07-9b7f-a69b0f6f5769
+version: 1
+date: '2025-05-02'
+author: Jon Scher, Corelight
+description: Logs SSL/TLS handshake and session details captured by Zeek (formerly
+  Bro), including certificates, cipher suites, and session information.
+mitre_components:
+- Certificate Registration
+- Network Traffic Flow
+- Network Traffic Content
+- Response Metadata
+- Application Log Content
+source: corelight:ssl:json
+sourcetype: corelight_ssl
+supported_TA:
+- name: TA for Corelight
+  url: https://splunkbase.splunk.com/app/3885
+  version: 2.5.4
