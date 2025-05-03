@@ -1,19 +1,20 @@
 name: Corelight weird
 id: 00a44d4d-2ebb-4776-81e5-4f9f995405f8
 version: 1
-date: '2025-05-02'
+date: "2025-05-02"
 author: Jon Scher, Corelight
-description: Logs anomalous or unexpected network behaviors identified by Zeek (formerly
+description:
+  Logs anomalous or unexpected network behaviors identified by Zeek (formerly
   Bro), including protocol violations and unusual traffic patterns.
 mitre_components:
-- Network Traffic Flow
-- Network Traffic Content
-- Response Metadata
-- Application Log Content
-- Host Status
+  - Network Traffic Flow
+  - Network Traffic Content
+  - Response Metadata
+  - Application Log Content
+  - Host Status
 source: corelight:weird:json
 sourcetype: corelight_weird
 supported_TA:
-- name: TA for Corelight
-  url: https://splunkbase.splunk.com/app/3885
-  version: 2.5.4
+  - name: TA for Corelight
+    url: https://splunkbase.splunk.com/app/3885
+    version: 2.5.4

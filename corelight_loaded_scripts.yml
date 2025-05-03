@@ -1,18 +1,19 @@
 name: Corelight loaded_scripts
 id: f3a438bb-1af8-4c3c-9f40-b95afdd4ad85
 version: 1
-date: '2025-05-02'
+date: "2025-05-02"
 author: Jon Scher, Corelight
-description: Logs details about the scripts loaded by Zeek (formerly Bro) during initialization,
+description:
+  Logs details about the scripts loaded by Zeek (formerly Bro) during initialization,
   including script names and paths.
 mitre_components:
-- Application Log Content
-- Configuration Modification
-- Script Execution
-- OS API Execution
+  - Application Log Content
+  - Configuration Modification
+  - Script Execution
+  - OS API Execution
 source: corelight:loaded_scripts:json
 sourcetype: coreligiht_loaded_scripts
 supported_TA:
-- name: TA for Corelight
-  url: https://splunkbase.splunk.com/app/3885
-  version: 2.5.4
+  - name: TA for Corelight
+    url: https://splunkbase.splunk.com/app/3885
+    version: 2.5.4

@@ -1,20 +1,20 @@
 name: Corelight dns
 id: da9b85a5-f97d-4c22-a3d6-19177acf8cc2
 version: 1
-date: '2025-05-02'
+date: "2025-05-02"
 author: Jon Scher, Corelight
-description: Logs DNS queries and responses captured by Zeek (formerly Bro), including
+description:
+  Logs DNS queries and responses captured by Zeek (formerly Bro), including
   details such as queried domains, resolved IPs, query types, and response codes.
 mitre_components:
-- Active DNS
-- Passive DNS
-- Network Traffic Content
-- Network Traffic Flow
-- Response Metadata
+  - Active DNS
+  - Passive DNS
+  - Network Traffic Content
+  - Network Traffic Flow
+  - Response Metadata
 source: corelight:dns:json
 sourcetype: corelight_dns
 supported_TA:
-- name: TA for Corelight
-  url: https://splunkbase.splunk.com/app/3885
-  version: 2.5.4
-
+  - name: TA for Corelight
+    url: https://splunkbase.splunk.com/app/3885
+    version: 2.5.4

@@ -1,18 +1,19 @@
 name: Corelight ntp
 id: e79067b0-ebe0-44c9-a669-5d4f1979d589
 version: 1
-date: '2025-05-02'
+date: "2025-05-02"
 author: Jon Scher, Corelight
-description: Logs Network Time Protocol (NTP) activity captured by Zeek (formerly
+description:
+  Logs Network Time Protocol (NTP) activity captured by Zeek (formerly
   Bro), including details such as NTP requests, responses, and server metadata.
 mitre_components:
-- Network Traffic Flow
-- Network Traffic Content
-- Response Metadata
-- Application Log Content
+  - Network Traffic Flow
+  - Network Traffic Content
+  - Response Metadata
+  - Application Log Content
 source: corelight:ntp:json
 sourcetype: corelight_ntp
 supported_TA:
-- name: TA for Corelight
-  url: https://splunkbase.splunk.com/app/3885
-  version: 2.5.4
+  - name: TA for Corelight
+    url: https://splunkbase.splunk.com/app/3885
+    version: 2.5.4
