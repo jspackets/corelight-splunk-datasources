@@ -1,18 +1,110 @@
 name: Corelight conn
 id: 4da66cd1-cd0a-4b9f-a5ad-b15809a6d82c
 version: 1
-date: '2025-05-02'
+date: "2025-05-02"
 author: Jon Scher, Corelight
-description: Logs network connection metadata captured by Zeek (formerly Bro), including
+description:
+  Logs network connection metadata captured by Zeek (formerly Bro), including
   details such as source and destination IPs, ports, connection state, and protocol.
 mitre_components:
-- Network Connection Creation
-- Network Traffic Flow
-- Response Metadata
-- Application Log Content
+  - Network Connection Creation
+  - Network Traffic Flow
+  - Response Metadata
+  - Application Log Content
 source: corelight:conn:json
 sourcetype: corelight_conn
 supported_TA:
-- name: TA for Corelight
-  url: https://splunkbase.splunk.com/app/3885
-  version: 2.5.4
+  - name: TA for Corelight
+    url: https://splunkbase.splunk.com/app/3885
+    version: 2.5.4
+fields:
+  - action
+  - bytes
+  - bytes_in
+  - bytes_out
+  - conn_state
+  - conn_state_meaning
+  - dest
+  - dest_host
+  - dest_ip
+  - dest_port
+  - duration
+  - dvc
+  - flow_id
+  - history
+  - id.orig_h
+  - id.orig_p
+  - id.resp_h
+  - id.resp_p
+  - id_orig_h
+  - id_orig_p
+  - id_resp_h
+  - id_resp_p
+  - is_broadcast
+  - is_dest_internal_ip
+  - is_src_internal_ip
+  - local_orig
+  - local_resp
+  - missed_bytes
+  - orig_bytes
+  - orig_ip_bytes
+  - orig_pkts
+  - packets
+  - packets_in
+  - packets_out
+  - product:
+  - proto
+  - resp_bytes
+  - resp_ip_bytes
+  - resp_pkts
+  - sensor_name
+  - src
+  - src_ip
+  - src_port
+  - tcp_flag
+  - transport
+  - ts
+  - tunnel_parents
+  - uid
+  - vendor
+  - vendor_product
+output_fields:
+  - action
+  - dest
+  - dest_ip
+  - dest_port
+  - dvc
+  - src
+  - src_ip
+  - src_port
+  - vendor_product
+example_log:
+  {
+    "_path": "conn",
+    "_system_name": "sensor.host1234.corelight.com",
+    "_write_ts": "2025-05-02T20:38:43.840030Z",
+    "ts": "2025-05-02T20:37:43.839483Z",
+    "uid": "C4MBpU3gy2dmrTWS15",
+    "id.orig_h": "172.16.22.13",
+    "id.orig_p": 68,
+    "id.resp_h": "172.16.22.1",
+    "id.resp_p": 67,
+    "proto": "udp",
+    "service": "dhcp",
+    "conn_state": "SHR",
+    "local_orig": true,
+    "local_resp": true,
+    "missed_bytes": 0,
+    "history": "^d",
+    "orig_pkts": 0,
+    "orig_ip_bytes": 0,
+    "resp_pkts": 1,
+    "resp_ip_bytes": 576,
+    "spcap.url": "https://sensor-pcap-finder-example.corelight.com/spcap/v1/?uid=C4MBpU3gy2dmrTWS15",
+    "spcap.rule": 1,
+    "spcap.trigger": "all-unencrypted",
+    "orig_l2_addr": "0a:ce:f7:2f:d3:e3",
+    "resp_l2_addr": "0a:46:b3:42:d3:05",
+    "community_id": "1:eZ41S18wVKyiE4Uf29BB/w4gvtQ=",
+    "pcr": -1.0,
+  }
